@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<layout version="0.1.0">
+<default>
+	<reference name="head">
+        <action method="addJs"><script>pageear/AC_OETags.js</script></action>
+        <action method="addJs"><script>pageear/pageear.js</script></action>
+    </reference>
+    <reference name="footer">
+    	<block type="core/template" name="page.peel" template="peel.phtml" />
+    	<!--block type="core/text" name="peel.js" after="-">
+            <action method="setText">
+                <text><![CDATA[<script type="text/javascript">writeObjects();</script>]]></text>
+			</action>
+		</block-->
+    </reference>
+</default>
+</layout>

@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<config>
+	 <tabs>
+        <peel translate="label" module="peel">
+            <label>Deph Extensions</label>
+            <sort_order>100</sort_order>
+        </peel>
+    </tabs>
+    <sections>
+        <peel translate="label" module="peel">
+            <label>Page Peel Setting</label>
+            <tab>peel</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>0</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <settings translate="label">
+                    <label>Configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                    	<enabled translate="label">
+                            <label>Enable Peel Effect</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </enabled>
+                        <redirect_url translate="label,comment">
+                            <label>Enter the Url to which you want to redirect</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Enter url here, like http://www.google.com</comment>
+                        </redirect_url>
+                        <tab translate="label">
+                            <label>Open in New Tab</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </tab>
+                        <direction translate="label">
+                            <label>Which Side</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>deph_peel_model_system_config_source_direction</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </direction>
+                        <bigImage translate="label">
+				<label>Big Image</label>
+				<comment><![CDATA[<b style="color:red">Please Make sure the Image size is 500x500.</b>]]>Allowed file types: jpeg, gif, png.</comment>
+				<frontend_type>image</frontend_type>
+				<backend_model>adminhtml/system_config_backend_image</backend_model>
+				<upload_dir config="system/filesystem/media" scope_info="1">pageear</upload_dir>
+				<base_url type="media" scope_info="1">pageear</base_url>
+				<sort_order>5</sort_order>
+				<show_in_default>1</show_in_default>
+				<show_in_website>1</show_in_website>
+				<show_in_store>1</show_in_store>
+			</bigImage>
+                        <smallImage translate="label">
+				<label>Small Image</label>
+				<comment><![CDATA[<b style="color:red">Please Make sure the Image size is 100x100.</b>]]>Allowed file types: jpeg, gif, png.</comment>
+				<frontend_type>image</frontend_type>
+				<backend_model>adminhtml/system_config_backend_image</backend_model>
+				<upload_dir config="system/filesystem/media" scope_info="1">pageear</upload_dir>
+				<base_url type="media" scope_info="1">pageear</base_url>
+				<sort_order>6</sort_order>
+				<show_in_default>1</show_in_default>
+				<show_in_website>1</show_in_website>
+				<show_in_store>1</show_in_store>
+			</smallImage>
+                    </fields>
+                </settings>
+            </groups>
+        </peel>
+    </sections>
+</config>

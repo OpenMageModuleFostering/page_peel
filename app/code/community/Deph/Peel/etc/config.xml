@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Deph_Peel>
+            <version>0.1.0</version>
+        </Deph_Peel>
+    </modules>
+    <global>
+        <helpers>
+            <peel>
+                <class>Deph_Peel_Helper</class>
+            </peel>
+        </helpers>
+	</global>
+	<frontend>
+		 <layout>
+            <updates>
+                <peel>
+                    <file>peel.xml</file>
+                </peel>
+            </updates>
+        </layout>
+    </frontend>
+    <adminhtml>
+	<acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <peel translate="title" module="moneybookers">
+                                            <title>Page Peel</title>
+                                        </peel>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+    <default>
+	<peel>
+	    <settings>
+		<enabled>1</enabled>
+		<redirect_url>http://www.google.com</redirect_url>
+		<tab>1</tab>
+		<direction>lt</direction>
+	    </settings>
+	</peel>
+    </default>
+</config>

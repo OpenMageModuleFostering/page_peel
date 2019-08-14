@@ -1,0 +1,20 @@
+<?php $helper = $this->helper('peel'); 
+$base_url = $helper->baseurl();
+
+$status = Mage::getStoreConfig('peel/settings/enabled');
+
+$redirect_url = Mage::getStoreConfig('peel/settings/redirect_url');
+
+$tab = Mage::getStoreConfig('peel/settings/tab');
+
+$direction = Mage::getStoreConfig('peel/settings/direction');
+
+$bigImage = $helper->getBigImage();;
+
+$smallImage = $helper->getSmallImage();
+
+?>
+
+<script type="text/javascript">
+	writeObjects("<?php echo $base_url?>", "<?php echo $redirect_url?>", "<?php echo $tab ?>", "<?php echo $direction ?>", "<?php echo $bigImage?>", "<?php echo $smallImage?>");
+</script>

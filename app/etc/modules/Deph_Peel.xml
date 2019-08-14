@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Deph_Peel>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Deph_Peel>
+    </modules>
+</config>
